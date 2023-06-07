@@ -1,5 +1,5 @@
 import { useEffect, useCallback, useRef } from "react";
-import { OnIntersectFunction, UseIntersectionObserverOptions } from "./type";
+import { OnIntersectFunction, UseIntersectionObserverOptions } from "../types";
 
 export const useIntersectionObserver = (
   onIntersect: OnIntersectFunction,

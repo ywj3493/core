@@ -1,6 +1,6 @@
 import { HTMLAttributes } from "react";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
-import { OnIntersectFunction } from "../hooks/type";
+import { OnIntersectFunction } from "../types";
 
 interface IntersectionTargetProps extends HTMLAttributes<HTMLDivElement> {
   onIntersect: OnIntersectFunction;

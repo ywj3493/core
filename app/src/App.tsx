@@ -1,6 +1,6 @@
+import InvisibleIntersectionTarget from "@metislib/core/src/components/InvisibleIntersectionTarget";
 import "./App.css";
-import InvisibleIntersectionTarget from "./core/components/InvisibleIntersectionTarget";
-import { OnIntersectFunction } from "./core/hooks/type";
+import { OnIntersectFunction } from "@metislib/core";
 
 function App() {
   const handleIntersect: OnIntersectFunction = async (entry, observer) => {
