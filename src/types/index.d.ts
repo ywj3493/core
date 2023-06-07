@@ -13,3 +13,8 @@ export interface UseIntersectionObserverParams
   onIntersect: OnIntersectFunction;
   options?: UseIntersectionObserverOptions;
 }
+
+export interface IntersectionTargetProps
+  extends HTMLAttributes<HTMLDivElement> {
+  onIntersect: OnIntersectFunction;
+}
