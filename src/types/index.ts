@@ -1,3 +1,5 @@
+import { HTMLAttributes } from "react";
+
 export declare type OnIntersectFunction = (
   entry: IntersectionObserverEntry,
   observer: IntersectionObserver
