@@ -20,3 +20,7 @@ export interface IntersectionTargetProps
   extends HTMLAttributes<HTMLDivElement> {
   onIntersect: OnIntersectFunction;
 }
+
+export interface InfiniteScrollProps extends HTMLAttributes<HTMLDivElement> {
+  onScrollEnd: OnIntersectFunction;
+}
