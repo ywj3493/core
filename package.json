@@ -1,11 +1,11 @@
 {
   "name": "@metislib/core",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "metislib core library",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
-    "dist"
+    "/dist"
   ],
   "scripts": {
     "build": "tsc",

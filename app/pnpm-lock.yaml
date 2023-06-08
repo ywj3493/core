@@ -2,8 +2,8 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@metislib/core':
-    specifier: file:../src
-    version: file:../src
+    specifier: ^1.0.4
+    version: 1.0.4(react@18.2.0)
   '@testing-library/jest-dom':
     specifier: ^5.16.5
     version: 5.16.5
@@ -2061,6 +2061,14 @@ packages:
 
   /@leichtgewicht/ip-codec@2.0.4:
     resolution: {integrity: sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==}
+    dev: false
+
+  /@metislib/core@1.0.4(react@18.2.0):
+    resolution: {integrity: sha512-qIFiPvLUDnDrX1f+0Gju2W8VsoG24HBPkPzOP8ch2/ZIIFQYTndQ5fJI+jQOMyQmb1QCx8XOz9wtxDiTF9NZUQ==}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1:
@@ -10307,10 +10315,4 @@ packages:
   /yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
-    dev: false
-
-  file:../src:
-    resolution: {directory: ../src, type: directory}
-    name: src
-    version: 0.0.0
     dev: false
