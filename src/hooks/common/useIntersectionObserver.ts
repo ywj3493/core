@@ -1,15 +1,17 @@
 import { useEffect, useCallback, useRef } from "react";
-import { OnIntersectFunction, UseIntersectionObserverOptions } from "@/types";
+import { UseIntersectionObserverProps } from "@/types";
 
-export const useIntersectionObserver = (
-  onIntersect: OnIntersectFunction,
-  {
+export function useIntersectionObserver({
+  onIntersect,
+  options,
+}: UseIntersectionObserverProps) {
+  const {
     threshold = 0,
     root = null,
     rootMargin = "0%",
     freezeOnceVisible = true,
-  }: UseIntersectionObserverOptions
-) => {
+  } = options || {};
+
   const ref = useRef<HTMLDivElement>(null);
 
   const callback = useCallback(
@@ -34,4 +36,4 @@ export const useIntersectionObserver = (
   }, [ref, threshold, root, rootMargin, callback]);
 
   return ref;
-};
+}

@@ -1,15 +1,19 @@
 import InvisibleIntersectionTarget from "./InvisibleIntersectionTarget";
-import { InfiniteScrollProps } from "@/types";
+import { InfiniteScrollSectionProps } from "@/types";
 
 const InfiniteScrollSection = ({
   onScrollEnd,
+  invisibleIntersectionTargetOptions,
   children,
   ...props
-}: InfiniteScrollProps) => {
+}: InfiniteScrollSectionProps) => {
   return (
     <div {...props}>
       {children}
-      <InvisibleIntersectionTarget onIntersect={onScrollEnd} />
+      <InvisibleIntersectionTarget
+        onIntersect={onScrollEnd}
+        options={invisibleIntersectionTargetOptions}
+      />
     </div>
   );
 };

@@ -1,15 +1,11 @@
-import { HTMLAttributes } from "react";
 import { useIntersectionObserver } from "@/hooks/common/useIntersectionObserver";
-import { OnIntersectFunction } from "@/types";
-
-interface IntersectionTargetProps extends HTMLAttributes<HTMLDivElement> {
-  onIntersect: OnIntersectFunction;
-}
+import { IntersectionTargetProps } from "@/types";
 
 export default function InvisibleIntersectionTarget({
   onIntersect,
+  options,
   ...props
 }: IntersectionTargetProps) {
-  const targetRef = useIntersectionObserver(onIntersect, { threshold: 1 });
+  const targetRef = useIntersectionObserver({ onIntersect, options });
   return <div style={{ width: "1px" }} ref={targetRef} {...props}></div>;
 }
