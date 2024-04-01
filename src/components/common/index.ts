@@ -1,2 +1,1 @@
-export * from "./InfiniteScrollSection";
-export * from "./InvisibleIntersectionTarget";
+export * from "./intersection";
