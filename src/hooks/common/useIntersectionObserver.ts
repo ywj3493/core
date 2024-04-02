@@ -14,7 +14,7 @@ export function useIntersectionObserver({
 
   const ref = useRef<HTMLDivElement>(null);
 
-  const callback = useCallback(
+  const onObserve = useCallback(
     (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting && freezeOnceVisible)
@@ -26,14 +26,14 @@ export function useIntersectionObserver({
 
   useEffect(() => {
     if (!ref.current) return;
-    const observer = new IntersectionObserver(callback, {
+    const observer = new IntersectionObserver(onObserve, {
       threshold,
       root,
       rootMargin,
     });
     observer.observe(ref.current);
     return () => observer.disconnect();
-  }, [ref, threshold, root, rootMargin, callback]);
+  }, [ref, threshold, root, rootMargin, onObserve]);
 
   return ref;
 }
