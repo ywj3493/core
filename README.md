@@ -1,45 +1,47 @@
+# Metis Library
+
 ## Features
 
-- Organization metislib's library
+- metis library
 
 ## Install
 
-```
-pnpm install @metislib/core
+```shell
+    pnpm install @metislib/core
 ```
 
 ## Component
 
 - InvisibleIntersectionTarget: this component can help easy to use IntersectionObserver API.
 
-  ```
+  ```typescript
   const handleIntersect: OnIntersectFunction = async (entry, observer) => {
-      observer.unobserve(entry.target);
-      console.dir("observed");
+    observer.unobserve(entry.target);
+    console.dir("observed");
   };
 
   return (
-      <div className="App">
+    <div className="App">
       <h1>TEST</h1>
-      <div style={{ height: "2000px" }}></div>
+      <div style={{ height: "2000px" }} />
       <InvisibleIntersectionTarget onIntersect={handleIntersect} />
-      </div>
+    </div>
   );
   ```
 
 - InfiniteScrollSection.tsx: If observed end of this div component, handles onScrollEnd props function.
 
-  ```
-  onst handleIntersect: OnIntersectFunction = async (entry, observer) => {
-      observer.unobserve(entry.target);
-      console.dir("observed");
+  ```typescript
+  const handleIntersect: OnIntersectFunction = async (entry, observer) => {
+    observer.unobserve(entry.target);
+    console.dir("observed");
   };
 
   return (
-      <div className="App">
+    <div className="App">
       <h1>TEST</h1>
-      <InfiniteScrollSection onScrollEnd={handleIntersect} >
+      <InfiniteScrollSection onScrollEnd={handleIntersect} />
       <div style={{ height: "2000px" }}></div>
-      </div>
+    </div>
   );
   ```
